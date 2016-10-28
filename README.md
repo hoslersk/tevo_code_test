@@ -31,7 +31,7 @@ Seles Monica H F 12-2-1973 Black
 
 ### Output 1:
 + First sorted by gender
-++ Females before males/alphabetical order
+- Females before males/alphabetical order
 + Then sorted by last name in ascending order
 
 ### Output 2:
@@ -40,7 +40,7 @@ Seles Monica H F 12-2-1973 Black
 ### Output 3:
 + Sorted by last name in descending order
 
-### output_sample.txt
+### output_sample.txt:
 
 ```
 Output 1:
