@@ -2,22 +2,39 @@ require_relative './text_parser'
 
 class TextDisplayer
 
-  def output3(text_parser)
-    # text_parser.consumer_record
+  def output2(text_parser)
     consumer_list = text_parser.consumer_record[:consumers]
-    last_name_array = []
+    dob_array = []
     consumer_list.each do |details, consumer|
-      last_name_array.push(consumer[:last_name])
+      dob_array.push(consumer[:dob])
     end
-    last_name_array.sort!.reverse!
-    puts "Output 3:"
-    last_name_array.each do |last_name|
-      consumer_list.each do |details, consumer|
-        if consumer[:last_name] == last_name
-          puts "#{consumer[:last_name]} #{consumer[:first_name]} #{consumer[:gender]} #{consumer[:dob]} #{consumer[:favorite_color]}"
-        end
+    # puts dob_array.sort_by! {|date| date[-4..-1]}
+    puts "Output 2:"
+    dob_array.sort_by! do |date|
+      if date.split("/")[0].to_i < 10 && date.split("/")[1].to_i < 10
+        "0"+(date)
+        "0"+(date.split("/")[1])
+      elsif date.split("/")[0].to_i < 10 && date.split("/")[1].to_i > 9
+        "0"+(date).gsub("/", "")
+      elsif date.split("/")[0].to_i > 9 && date.split("/")[1].to_i < 10
+        "0"+(date.split("/")[1])
+      else
+        date.gsub("/", "")
       end
     end
+
+  end
+
+  def output3(text_parser)
+    consumer_list = text_parser.consumer_record[:consumers]
+    consumer_list.sort_by! do |key|
+      key[:last_name]
+    end
+    consumer_list.reverse!
+    puts "Output 3:" # submits heading prior to iteration
+      consumer_list.each do |details|
+          puts "#{details[:last_name]} #{details[:first_name]} #{details[:gender]} #{details[:dob]} #{details[:favorite_color]}"
+      end
   end
 
 end
@@ -30,6 +47,7 @@ test_parser.parse_comma_txt('./input_files/comma.txt')
 test_parser.parse_pipe_txt('./input_files/pipe.txt')
 test_parser.parse_space_txt('./input_files/space.txt')
 
+# test_displayer.output2(test_parser)
 test_displayer.output3(test_parser)
 
 # output 1:
@@ -37,6 +55,3 @@ test_displayer.output3(test_parser)
 
 # output 2:
 # sorted by birthdate, ascending
-
-# output 3:
-# sorted by last name, descending
