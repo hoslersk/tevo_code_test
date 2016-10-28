@@ -73,10 +73,3 @@ class TextParser
   end
 
 end
-
-# output 1:
-# sorted by gender (females first/alphabetical) and then last name, ascending
-# output 2:
-# sorted by birthdate, ascending
-# output 3:
-# sorted by last name, descending
