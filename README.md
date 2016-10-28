@@ -30,8 +30,7 @@ Seles Monica H F 12-2-1973 Black
 ## Desired Output:
 
 ### Output 1:
-+ First sorted by gender
-- Females before males/alphabetical order
++ First sorted by gender (females before males/alphabetical order)
 + Then sorted by last name in ascending order
 
 ### Output 2:
