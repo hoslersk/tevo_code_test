@@ -7,6 +7,4 @@ test_parser.omni_parser
 
 test_displayer = TextDisplayer.new
 
-test_displayer.output1(test_parser)
-test_displayer.output2(test_parser)
-test_displayer.output3(test_parser)
+test_displayer.omni_output(test_parser)

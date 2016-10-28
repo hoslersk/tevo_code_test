@@ -2,6 +2,12 @@ require_relative './text_parser'
 
 class TextDisplayer
 
+  def omni_output(text_parser)
+    output1(text_parser)
+    output2(text_parser)
+    output3(text_parser)
+  end
+
   def output_display(consumer_list, current_method)
     puts "Output #{current_method.to_s[-1]}:" # interpolates the output number from method name
     consumer_list.each do |details|
