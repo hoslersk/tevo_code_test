@@ -1,5 +1,3 @@
-require 'pry'
-
 class TextParser
 
   attr_reader :consumer_record
