@@ -1,17 +1,17 @@
-### TEvo Code Challenge For .txt File Parsing, Data Collecting, and Reformatting
+# TEvo Code Challenge For .txt File Parsing, Data Collecting, and Reformatting
 
 Once cloned down, run ```ruby bin/run.rb``` within terminal to receive output results.
 
 ## Original data will come in 3 .txt files:
 
-# comma.txt:
+### comma.txt:
 
 ```
 Abercrombie, Neil, Male, Tan, 2/13/1943
 Bishop, Timothy, Male, Yellow, 4/23/1967
 Kelly, Sue, Female, Pink, 7/12/1959
 ```
-# pipe.txt:
+### pipe.txt:
 
 ```
 Smith | Steve | D | M | Red | 3-3-1985
@@ -19,7 +19,7 @@ Bonk | Radek | S | M | Green | 6-3-1975
 Bouillon | Francis | G | M | Blue | 6-3-1975
 ```
 
-# space.txt:
+### space.txt:
 
 ```
 Kournikova Anna F F 6-3-1975 Red
@@ -29,7 +29,18 @@ Seles Monica H F 12-2-1973 Black
 
 ## Desired Output:
 
-# output_sample.txt
+### Output 1:
++ First sorted by gender
+++ Females before males/alphabetical order
++ Then sorted by last name in ascending order
+
+### Output 2:
++ Sorted by birth date in ascending order
+
+### Output 3:
++ Sorted by last name in descending order
+
+### output_sample.txt
 
 ```
 Output 1:
