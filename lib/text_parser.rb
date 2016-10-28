@@ -25,6 +25,28 @@ class TextParser
     date.gsub!("-", "/")
   end
 
+  def txt_collector
+    Dir["./input_files/*.txt"]
+  end
+
+  def determine_format_action(text_path)
+    if File.readlines(text_path)[0].include?(", ")
+      parse_comma_txt(text_path)
+    elsif File.readlines(text_path)[0].include?(" | ")
+      parse_pipe_txt(text_path)
+    elsif File.readlines(text_path)[0].include?(" ") && !File.readlines(text_path)[0].include?(",")
+      parse_space_txt(text_path)
+    else
+      puts "Cannot read file in its current formatting"
+    end
+  end
+
+  def omni_parser
+    txt_collector.each do |file_path|
+      determine_format_action(file_path)
+    end
+  end
+
   def parse_comma_txt(comma_txt_path)
     File.readlines(comma_txt_path).each do |line| # sets each line of text file as "line"
       remove_new_line(line) # removes new line
