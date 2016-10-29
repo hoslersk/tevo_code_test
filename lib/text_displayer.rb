@@ -27,7 +27,7 @@ class TextDisplayer
   def output2(text_parser)
     consumer_list = text_parser.consumer_record[:consumers]
     consumer_list.sort_by! do |details|
-      [ details[:dob].split("/")[2], details[:dob].split("/")[1], details[:dob].split("/")[0], details[:last_name] ]
+      [ details[:dob].split("/")[2], details[:dob].split("/")[0], details[:dob].split("/")[1], details[:last_name] ]
       # sorts in order of birth year, month, day, and then last name (for examples w/ repeat dob)
     end
     output_display(consumer_list, __method__) # passing current method as argument for more dynamic use
