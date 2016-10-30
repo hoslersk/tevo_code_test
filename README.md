@@ -1,6 +1,10 @@
 # TEvo Code Challenge For .txt File Parsing, Data Collecting, and Reformatting
 
-Once cloned down, run ```ruby bin/run.rb``` within terminal to receive output results.
+Once cloned down, run ```ruby bin/run.rb``` to receive output results.
+
+### Bonus:
+
+Alternatively, run ```ruby bin/interactive.rb``` and follow command prompts for interactive version.
 
 ## Original data will come in 3 .txt files:
 

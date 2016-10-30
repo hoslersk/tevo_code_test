@@ -11,6 +11,7 @@ class InteractiveCLI
     command_prompt
     user_input = ""
     until user_input.downcase == "exit" do
+      puts "Enter command:\n\n"
       user_input = gets.chomp
       if user_input.downcase == "start"
         output_prompt
@@ -27,7 +28,6 @@ class InteractiveCLI
       elsif user_input.downcase != "exit"
         puts "Invalid command, please try again.\n\n"
       end
-      puts "Enter command:\n\n"
     end
   end
 
