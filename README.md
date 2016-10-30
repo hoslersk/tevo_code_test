@@ -1,5 +1,7 @@
 # TEvo Code Challenge For .txt File Parsing, Data Collecting, and Reformatting
 
+## Instructions:
+
 Once cloned down, run ```ruby bin/run.rb``` to receive output results.
 
 ### Bonus:
