@@ -8,6 +8,12 @@ Once cloned down, run ```ruby bin/run.rb``` to receive output results.
 
 Alternatively, run ```ruby bin/interactive.rb``` and follow command prompts for interactive version.
 
+### Testing:
+
+Install Rspec with ```gem install rspec```.
+
+Run ```rspec``` for available tests.
+
 ## Original data will come in 3 .txt files:
 
 ### comma.txt:

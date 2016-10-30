@@ -32,18 +32,11 @@ class InteractiveCLI
   end
 
   def command_prompt
-    puts "Enter one of the following commands:"
-    puts "Enter 'Start' to view data output options"
-    puts "Enter 'Options' to repeat list of commands"
-    puts "Enter 'Exit' to end process\n\n"
+    puts "Enter one of the following commands:\n Enter 'Start' to view data output options\n Enter 'Options' to repeat list of commands\n Enter 'Exit' to end process\n\n"
   end
 
   def output_prompt
-    puts "Select how you to display data:"
-    puts "Enter '1' for data sorted by gender and last name in descending order"
-    puts "Enter '2' for data sorted by sorted by birth date, in ascending order"
-    puts "Enter '3' for data sorted by sorted by last name in descending order"
-    puts "Enter 'All' for all of the above\n\n"
+    puts "Select how you to display data:\n Enter '1' for data sorted by gender and last name in descending order\n Enter '2' for data sorted by sorted by birth date, in ascending order\n Enter '3' for data sorted by sorted by last name in descending order\n Enter 'All' for all of the above\n\n"
   end
 
 end
